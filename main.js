@@ -1,8 +1,48 @@
-var c = false
+var c = false;
 const cursor = document.getElementById("blinking-cursor");
-const stdout = document.getElementById("cmd-output")
+const output = document.getElementById("cmd-output");
+const input = document.getElementById("cmd-in")
+
+var path = "J:\\portfolio"
+
 
 setInterval(cursor_blink, 1000);
+print("string1")
+
+output.textContent = ""
+input.value = ""
+path = "J:\\portfolio"
+
+function print(msg, newline = true) {
+    var text = output.innerHTML
+    if (newline && text != "") {
+        text += "<br>"
+    }
+    text += msg
+
+    output.innerHTML = text
+    window.scrollTo({ top: document.body.scrollHeight })
+}
+
+
+function parse_command(c) {
+    if (c == "help") {
+        print(" help |   lists all commands");
+        print(" cd [dir_path] |   changes directory to the one at [dir_path]");
+        print(" dir |   lists all directories in the current directory");
+        print(" clear |   clears the output")
+    }
+
+    if (c == "clear") {
+        output.innerHTML = ""
+    }
+
+
+
+}
+
+
+
 function cursor_blink() {
     c = !c
 
@@ -12,4 +52,12 @@ function cursor_blink() {
         cursor.style.backgroundColor = "#ffffffaf";
     }
 }
+
+input.addEventListener("keyup", function (e) {
+    if (e.keyCode === 13) {
+        print(path + ">" + input.value)
+        parse_command(input.value)
+        input.value = ""
+    }
+});
 
