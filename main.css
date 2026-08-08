@@ -7,7 +7,6 @@ body {
     font-weight: 100;
     font-style: normal;
     font-size: 250%;
-    padding-left: 2%;
 }
 
 .title {
@@ -42,7 +41,68 @@ body {
 .blinking-cursor {
     transform: translate(-22px, 4px);
     display: inline-block;
-    height: 35;
+    height: 35px;
     width: 4px;
     background-color: #ffffffff;
+}
+
+.bg {
+    line-height: 1;
+    white-space: wrap;
+    overflow-wrap: anywhere;
+    width: 110vw;
+    height: 100vh;
+    color: #affaaf20;
+    position: absolute;
+    left: 0px;
+    top: -100px;
+    font-size: 20px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: -1000;
+    overflow-x: clip;
+    overflow-y: clip;
+}
+
+.cmd {
+    justify-content: left;
+    padding-left: 5px;
+    border-width: 3px;
+    font-family: input-serif, sans-serif;
+    font-size: 15px;
+    border-style: solid;
+    border-radius: 6px;
+    corner-shape: bevel;
+    border-color: #ffffff;
+    background-color: #224;
+    border-top-width: 0;
+    border-right-width: 0;
+    white-space: nowrap;
+}
+
+.cline {
+    display: flex;
+    line-height: 0;
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    input {
+        caret-shape: block;
+        caret-color: #fff;
+        font-family: input-serif,
+            sans-serif;
+        font-size: 15px;
+        width: 100%;
+        border-style: none;
+        background-color: #00000000;
+        color: #ffffff;
+    }
+
 }
