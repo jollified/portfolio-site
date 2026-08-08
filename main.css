@@ -30,11 +30,19 @@ body {
 
 .top-flavor {
     color: #054902;
-    font-size: 75%;
+    font-size: 35;
     display: inline-block;
 
     p {
         -webkit-text-stroke: 1px #b8faa4;
     }
 
+}
+
+.blinking-cursor {
+    transform: translate(-22px, 4px);
+    display: inline-block;
+    height: 35;
+    width: 4px;
+    background-color: #ffffffff;
 }
