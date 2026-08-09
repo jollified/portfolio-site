@@ -6,7 +6,7 @@ body {
     font-family: "input-serif", serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 250%;
+    font-size: 200%;
 }
 
 
@@ -68,53 +68,18 @@ body {
     overflow-y: clip;
 }
 
-.cmd {
-    justify-content: left;
-    padding-left: 5px;
-    border-width: 3px;
-    font-family: input-serif, sans-serif;
-    font-size: 15.5px;
-    border-style: solid;
-    border-radius: 6px;
-    corner-shape: bevel;
-    border-color: #ffffff;
-    background-color: #112;
-    border-top-width: 0;
-    border-right-width: 0;
+.topbar {
+    background-color: #224;
+    overflow-x: hidden;
+    position: fixed;
 
-    padding: 0;
-    margin: 0;
-
+    width: 100%;
 }
 
-.cline {
-    background-color: #112;
-    display: flex;
-    line-height: 0;
-    white-space: nowrap;
-
-    height: 30px;
-
-    input:focus,
-    textarea:focus {
-        outline: none;
-        box-shadow: none;
-    }
-
-    line-height: 0;
-
-    input {
-        line-height: 0;
-        height: 30px;
-        caret-shape: block;
-        caret-color: #fff;
-        font-family: input-serif,
-            sans-serif;
-        font-size: 15px;
-        width: 100%;
-        border-style: none;
-        background-color: #00000000;
-        color: #ffffff;
-    }
-
+.topbar a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
 }

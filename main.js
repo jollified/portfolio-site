@@ -25,22 +25,6 @@ function print(msg, newline = true) {
 }
 
 
-function parse_command(c) {
-    if (c == "help") {
-        print(" help |   lists all commands");
-        print(" cd [dir_path] |   changes directory to the one at [dir_path]");
-        print(" dir |   lists all directories in the current directory");
-        print(" clear |   clears the output")
-    }
-
-    if (c == "clear") {
-        output.innerHTML = ""
-    }
-
-
-
-}
-
 
 
 function cursor_blink() {
@@ -60,4 +44,7 @@ input.addEventListener("keyup", function (e) {
         input.value = ""
     }
 });
+
+
+
 
