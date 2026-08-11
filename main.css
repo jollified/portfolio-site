@@ -3,8 +3,9 @@
 
 
 body {
+    margin: 0;
     color: white;
-    background-color: #000f0f;
+    background-color: #001;
     font-family: "input-serif", serif;
     font-weight: 100;
     font-style: normal;
@@ -12,6 +13,62 @@ body {
 
 .top {
     font-size: 200%;
+}
+
+.desc {
+    background-image:
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><g fill="%23000"><path d="M1000 100C500 100 500 64 0 64V0h1000v100Z" opacity=".5"></path><path d="M1000 100C500 100 500 34 0 34V0h1000v100Z" opacity=".5"></path><path d="M1000 100C500 100 500 4 0 4V0h1000v100Z"></path></g></svg>'),
+
+        linear-gradient(0deg, #336, #06060a);
+    background-color: #336;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto, auto;
+    padding-top: 10%;
+    position: relative;
+
+    font-size: 150%;
+    color: #fff;
+
+    -webkit-text-stroke: 1px #ddd;
+
+    .links {
+        display: flex;
+        justify-content: center;
+    }
+
+    a {
+        font-size: 200%;
+        padding: 0.5%;
+        transition: 0.1s
+    }
+
+    a:hover {
+        transform-origin: center;
+        transform: rotate(2deg) scale(1.1, 1.1);
+    }
+
+    a:link {
+        color: #fff;
+    }
+
+    a:active {
+        color: #fff;
+    }
+
+    a:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    span {
+        font-weight: 800;
+    }
+
 }
 
 .topbar {
@@ -81,39 +138,12 @@ body {
 
 }
 
-.top-flavor {
-    -webkit-user-select: none;
-    /* Safari */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* IE10+/Edge */
-    user-select: none;
-    /* Standard */
-
-    color: #054902;
-    font-size: 35;
-    display: inline-block;
-
-    p {
-        -webkit-text-stroke: 1px #b8faa4;
-    }
-
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+    display: none;
 }
 
-.blinking-cursor {
-    -webkit-user-select: none;
-    /* Safari */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* IE10+/Edge */
-    user-select: none;
-    /* Standard */
-
-    transform: translate(-22px, 4px);
-    display: inline-block;
-    height: 35px;
-    width: 4px;
-    background-color: #ffffffff;
+/* Firefox */
+html {
+    scrollbar-width: none;
 }
