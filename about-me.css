@@ -1,0 +1,57 @@
+@import url("https://use.typekit.net/byl1mxp.css");
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+    min-height: 100vh;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+    background-color: #001;
+    font-family: "input-serif", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #224;
+    border-bottom: ridge 1px #55a;
+    overflow-x: hidden;
+}
+
+.topbar a {
+    float: left;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-right: dotted 1px #55a;
+}
+
+.topbar a:hover {
+    background-color: #336;
+}
+
+.topbar .final {
+    border-right: none;
+}
+
+.topbar .active {
+    font-weight: 800;
+}
